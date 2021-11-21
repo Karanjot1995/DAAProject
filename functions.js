@@ -84,7 +84,7 @@ function sort(method){
     } else if(method == 'Heap Sort'){
         sorted = heapSort(arr)
     }else if (method == 'Median Quick Sort'){
-        sorted = MedianQuickSort(arr);
+        sorted = ThreeMedianQuickSort(arr);
     }else if(method == 'Radix Sort'){
         sorted = radixSort(arr)
     }
@@ -109,8 +109,8 @@ function compareAll(){
         'Merge Sort': mergeSort,
         'Quick Sort': quickSort,
         'Heap Sort': heapSort,
-        'Radix Sort': MedianQuickSort,
-        'Median Quick Sort': MedianQuickSort
+        'Radix Sort': radixSort,
+        'Median Quick Sort': ThreeMedianQuickSort
     }
 
     let startTime, endTime;
@@ -131,7 +131,9 @@ function compareAll(){
 
         let height = times[i]*100
 
-        if(randomArray.length <=5000){
+        if(randomArray.length <=1000){
+            height = times[i]*15000
+        }else if(randomArray.length <=5000){
             height = times[i]*1500
         }else if( randomArray.length>30000){
             height = times[i]*20
