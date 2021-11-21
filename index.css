@@ -1,0 +1,141 @@
+body{
+    margin: 5rem;
+}
+.m-1{
+    margin: 1rem;
+}
+.d-none{
+    display:none
+}
+
+.mh-3{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.mb-1{
+    margin-bottom: 1rem;
+}
+.mh-1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+div{
+    margin-top: 1rem;
+}
+#randomNums p, #output{
+    word-wrap: break-word;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+h3{
+    font-size: 20px;
+}
+p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background-color: rgba(0, 0, 0, .2);
+
+    width: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }
+
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+
+
+.sorting-btns button:active, .sorting-btns button:focus{
+    background-color: rgb(14, 16, 185);
+    color: #fff;
+}
+
+#sortedOutput{
+    border: 1px solid #bfbbbb;
+    padding: 10px;
+}
+
+#sortMethod{
+    text-transform: uppercase;
+}
+
+#compare-all p,span{
+  font-size: 20px;
+}
+
+.compare-btn{
+    height: 30px;
+    margin:5px
+}
+button{
+    cursor: pointer;
+}
+
+.chart-container{
+    position: relative;
+}
+.lines{
+    position: absolute;
+    width:70%;
+    margin-left: 18%;
+}
+hr{
+    margin-bottom: 42px;
+}
+
+.chart{
+    display:table;
+    table-layout: fixed;   
+    width:70%;
+    max-width:700px;
+    height:200px;
+    margin:0 auto;
+    
+    background-image:linear-gradient(bottom, rgba(0, 0, 0, 0.1) 2%, transparent 2%);
+    background-size: 100% 50px;
+    background-position: left top;
+}
+    
+.chart li{
+    position:relative;
+    display:table-cell;
+    vertical-align:bottom;
+    height:260px;
+    padding-bottom: 60px;
+    overflow:hidden;
+}
+    
+li span{
+    margin:0 1em;
+    display: block;
+    background: #085981;
+    animation: draw 1s ease-in-out;
+    
+}
+.bar-title{
+    color: black;
+}
+
+li span::before{
+    position:absolute;
+    left:0;right:0;top:80%;
+    padding:5px 0.2rem 0;
+    display:block;
+    text-align:center;
+    content:attr(title);
+    word-wrap: break-word;
+    font-size: 15px;
+}
+    
+  
+  @keyframes draw{
+    0%{height:0;} 
+  }

@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container"> 
+            <div class="mh-1">
+                Select random 10000 numbers to sort
+                <button id="random" onclick="generateRandom()">Select Random</button>
+            </div>
+            <!-- <span>OR (custom input below)</span>
+            <div class="mb-1">
+                <input id="sortInput" />
+                <button id="random" onclick="setInput()">Submit</button>
+            </div> -->
+            <span>OR (select input range below - random order)</span>
+            <div>
+                <input id="startRange" type="number"/>
+                to
+                <input id="endRange" type="number"/>
+                <button id="range" onclick="setRange()">Submit</button>
+            </div>
+        </div>
+        <div id="random-numbers" style="display: none;" class="mh-3">
+            <div id="randomNums"></div>
+        </div>
+        <div class="sorting-btns d-none" id="sorting-btns">
+            <h3>Select Sorting method</h3>
+            <button onclick="sort('Bubble Sort')">Bubble Sort</button>
+            <button onclick="sort('Selection Sort')">Selection Sort</button>
+            <button onclick="sort('Insertion Sort')">Insertion Sort</button>
+            <button onclick="sort('Merge Sort')">Merge Sort</button>
+            <button onclick="sort('Quick Sort')">Quick Sort</button>
+            <button onclick="sort('Heap Sort')">Heap Sort</button>
+            <button onclick="sort('Radix Sort')">Radix Sort</button>
+            <button onclick="sort('Median Quick Sort')">3 Median Quick Sort</button>
+            OR
+            <button class="compare-btn" onclick="compareAll()">Compare All</button>
+
+        </div>
+       
+        <div class="container d-none" id="sortedOutput">
+            <h2>Output (<span id="sortMethod"></span>)  
+                <h3 class="d-flex">Execution Time: <span id="eTime"></span></h3>            
+                <p id="output"></p>
+            </h2>
+        </div>
+        <div class="d-flex">
+            <div class="container" id="compare-all">
+                <h2>Execution Times for all</h2>
+                <p id="bub">Bubble Sort: <span class="compare"></span></p>
+                <p id="sel">Selection Sort: <span class="compare"></span></p>
+                <p id="ins">Insertion Sort: <span class="compare"></span></p>
+                <p id="mer">Merge Sort: <span class="compare"></span></p>
+                <p id="qui">Quick Sort: <span class="compare"></span></p>
+                <p id="hea">Heap Sort: <span class="compare"></span></p>
+                <p id="rad">Radix Sort: <span class="compare"></span></p>
+                <p id="med">3 Median Quick Sort: <span class="compare"></span></p>
+            </div>
+            <div class="chart-container d-none" id="graph">
+                <div class="lines"><hr><hr><hr><hr><hr></div>
+                <ul class="chart" id="bar-graph">
+                </ul>
+            </div>
+        </div>
+       
+    </body>    
+
+    <script src="functions.js"></script>
+    <script src="sortingMethods.js"></script>
+</html>
